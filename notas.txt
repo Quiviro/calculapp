@@ -1,0 +1,3 @@
+Una página para hacer las operaciones y otra con teoría. Elegir cual(es) operación(es) quieres.
+Varios niveles de dificultad (random * 10, 100, 1000...,negativos, decimales...)
+Contador de racha de aciertos
