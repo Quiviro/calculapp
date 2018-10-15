@@ -1,3 +1,11 @@
-Una página para hacer las operaciones y otra con teoría. Elegir cual(es) operación(es) quieres.
+Portada
+
+Calcular (elegir y ejecutar operaciones)
+
+Estudiar (explicaciones teóricas)
+
+
+
 Varios niveles de dificultad (random * 10, 100, 1000...,negativos, decimales...)
 Contador de racha de aciertos
+
