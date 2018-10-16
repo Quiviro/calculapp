@@ -3,9 +3,12 @@ Portada
 Calcular (elegir y ejecutar operaciones)
 
 Estudiar (explicaciones teóricas)
+  Pestaña de iconos + - * /
 
 
 
 Varios niveles de dificultad (random * 10, 100, 1000...,negativos, decimales...)
 Contador de racha de aciertos
+
+https://www.smartick.es/blog/matematicas/sumas-y-restas/aprender-a-sumar/
 

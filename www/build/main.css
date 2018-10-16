@@ -25673,3 +25673,12 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+page-teoria .botonera ion-segment-button {
+  height: 66px !important;
+  line-height: .5rem !important;
+}
+
+page-teoria .botonera ion-segment-button span {
+  line-height: .5rem !important;
+}

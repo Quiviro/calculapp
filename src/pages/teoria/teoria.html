@@ -8,13 +8,65 @@
   </ion-header>
   
   <ion-content padding>
-    <h1 text-center>Vamos a repasar un poco antes de calcular</h1>
-  
-    <p>
-      
-    </p>
-  
-    <button ion-button secondary menuToggle text-centered>
+    <h2 text-center>Vamos a repasar un poco antes de calcular</h2>
+
+    <ion-segment [(ngModel)]="mymodel" class="botonera">
+      <ion-segment-button value="teoriaSumar">
+        <ion-icon name="add"></ion-icon>
+        <br>
+        <span>Sumar</span>
+      </ion-segment-button>
+      <ion-segment-button value="teoriaRestar">
+        <ion-icon name="remove"></ion-icon>
+        <br>
+        <span>Restar</span>
+      </ion-segment-button>
+      <ion-segment-button value="teoriaMultiplicar">
+        <ion-icon name="close"></ion-icon>
+        <br>
+        <span>Multiplicar</span>
+      </ion-segment-button>
+      <ion-segment-button value="teoriaDividir">
+        <ion-icon name="cut"></ion-icon>
+        <br>
+        <span>Dividir</span>
+      </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="mymodel" text-wrap>
+      <ion-list *ngSwitchCase="'teoriaSumar'">
+        <ion-item>
+          <h3 text-center>SUMAR</h3>
+          <p>Sumar es juntar 2 o más cosas para saber cuántas hay en total.</p>
+          <br>
+          <p>Por ejemplo: Pedro tiene 3 balones y María tiene 6. Si juntamos a Pedro y a María, ¿cuántos balones tienen en total? 3 + 6 = 9</p>
+          <br>
+          <p>Cuéntalos y verás que hay 9 balones:</p>
+          <img src="../../assets/imgs/suma1.png">
+          <br>
+          <p>Ahora vamos a aprender a sumar con los dedos: En una mano ponemos 2 dedos y en la otra 3 dedos. Y ahora contamos todos los dedos que tenemos: 2 dedos + 3 dedos, es igual a 5 dedos.</p>
+          <img src="../../assets/imgs/suma2.png">
+          <br>
+          <p>¿Preparado para comenzar?</p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'teoriaRestar'">
+        <ion-item>Lorem ipsum dolor... RESTAR</ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'teoriaMultiplicar'">
+        <ion-item>Lorem ipsum... MULTIPLICAR</ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'teoriaDividir'">
+        <ion-item>Lorem ipsum dolor... DIVIDIR</ion-item>
+      </ion-list>
+    </div>
+
+    <button ion-button color="secondary" menuToggle text-centered>
       <ion-icon left name="finger-print"> Menu</ion-icon>
     </button>
   </ion-content>
+  <ion-tabs>
+      <ion-tab [root]="tab1Root" tabTitle="Sumar" tabIcon="add"></ion-tab>
+      <ion-tab [root]="tab2Root" tabTitle="Restar" tabIcon="remove"></ion-tab>
+      <ion-tab [root]="tab3Root" tabTitle="Multiplicar" tabIcon="close"></ion-tab>
+      <ion-tab [root]="mienlace" tabTitle="Dividir" tabIcon="barcode"></ion-tab>
+    </ion-tabs>
