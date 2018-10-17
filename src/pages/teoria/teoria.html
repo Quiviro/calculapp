@@ -8,7 +8,7 @@
   </ion-header>
   
   <ion-content padding>
-    <h2 text-center>Vamos a repasar un poco antes de calcular</h2>
+    <h2 text-center>¿Necesitas ayuda?</h2>
 
     <ion-segment [(ngModel)]="mymodel" class="botonera">
       <ion-segment-button value="teoriaSumar">
@@ -33,15 +33,22 @@
       </ion-segment-button>
     </ion-segment>
     <div [ngSwitch]="mymodel" text-wrap>
-      <ion-list *ngSwitchCase="'teoriaSumar'">
+      <ion-list *ngSwitchCase="">
         <ion-item>
-          <h3 text-center>SUMAR</h3>
+          <p>Pulsa en la operación de la que quieres repasar la teoría para ver una pequeña explicación.</p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'teoriaSumar'">
+        
+        <ion-item>
+          <h2 text-center>SUMAR</h2>
           <p>Sumar es juntar 2 o más cosas para saber cuántas hay en total.</p>
           <br>
           <p>Por ejemplo: Pedro tiene 3 balones y María tiene 6. Si juntamos a Pedro y a María, ¿cuántos balones tienen en total? 3 + 6 = 9</p>
           <br>
           <p>Cuéntalos y verás que hay 9 balones:</p>
           <img src="../../assets/imgs/suma1.png">
+          <br>
           <br>
           <p>Ahora vamos a aprender a sumar con los dedos: En una mano ponemos 2 dedos y en la otra 3 dedos. Y ahora contamos todos los dedos que tenemos: 2 dedos + 3 dedos, es igual a 5 dedos.</p>
           <img src="../../assets/imgs/suma2.png">
