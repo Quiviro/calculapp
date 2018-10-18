@@ -12,3 +12,5 @@ Contador de racha de aciertos
 
 https://www.smartick.es/blog/matematicas/sumas-y-restas/aprender-a-sumar/
 
+En /src/assets se guardan los iconos de la aplicación
+
