@@ -60502,3 +60502,18 @@ page-teoria .botonera ion-segment-button {
 page-teoria .botonera ion-segment-button span {
   line-height: .5rem !important;
 }
+
+page-teoria #botonesMultiplicar button {
+  margin: 13px;
+}
+
+page-teoria #tablaMultiplicar p {
+  font-size: 1.3em;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+page-teoria #tablaMultiplicar p span {
+  border-bottom: 1px solid #666;
+  padding: 0 1.3em;
+}

@@ -84,18 +84,20 @@
           <br>
           <br>
           <p>¿Quieres ver alguna tabla de multiplicar?</p>
-          <p pane>
-            <button ion-button round color="cero">0</button>
-            <button ion-button round color="uno">1</button>
-            <button ion-button round color="dos">2</button>
-            <button ion-button round color="tres">3</button>
-            <button ion-button round color="cuatro">4</button>
-            <button ion-button round color="cinco">5</button>
-            <button ion-button round color="seis">6</button>
-            <button ion-button round color="siete">7</button>
-            <button ion-button round color="ocho">8</button>
-            <button ion-button round color="nueve">9</button>
+          <p text-center id="botonesMultiplicar">
+            <button ion-button round color="cero" (click)='tabla(0)'>0</button>
+            <button ion-button round color="uno" (click)='tabla(1)'>1</button>
+            <button ion-button round color="dos" (click)='tabla(2)'>2</button>
+            <button ion-button round color="tres" (click)='tabla(3)'>3</button>
+            <button ion-button round color="cuatro" (click)='tabla(4)'>4</button>
+            <button ion-button round color="cinco" (click)='tabla(5)'>5</button>
+            <button ion-button round color="seis" (click)='tabla(6)'>6</button>
+            <button ion-button round color="siete" (click)='tabla(7)'>7</button>
+            <button ion-button round color="ocho" (click)='tabla(8)'>8</button>
+            <button ion-button round color="nueve" (click)='tabla(9)'>9</button>
           </p>
+          <br>
+          <div id="tablaMultiplicar"></div>
         </ion-item>
       </ion-list>
       <ion-list *ngSwitchCase="'teoriaDividir'">

@@ -22,4 +22,14 @@ export class TeoriaPage {
     console.log('ionViewDidLoad TeoriaPage');
   }
 
+  tabla(x)
+  {
+    let construyeTabla:string = '';
+    for (let i = 0; i <= 10; i++) {
+      construyeTabla += '<p large><span>' + x + ' &nbsp; x &nbsp; ' + i 
+      + ' &nbsp; = &nbsp; ' + x*i + '</span></p>';
+    }
+    document.getElementById("tablaMultiplicar").innerHTML = construyeTabla;
+  }
+
 }
