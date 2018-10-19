@@ -1,6 +1,8 @@
+Quiero ocultar/mostrar la operación como hicimos en la página modal.html
+
 Pedir resultado al usuario
 Comprobar que es correcto
 Contador de racha de aciertos
 Varios niveles de dificultad
-operando1 != númeroPrimo
+'dividir': operando1 != númeroPrimo
 

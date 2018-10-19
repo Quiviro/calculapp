@@ -27,10 +27,10 @@ export class PracticaPage {
     let operador:string;
     let operando1:number;
     let operando2:number;
-    let resultado:any;
-    let construirOperacion:any;
+    let resultado:number;
+    let construirOperacion:string = '';
 
-    // Math.floor(Math.random()) * (max - min) + min;
+    // Math.floor(Math.random() * (max - min) + min);
     operando1 = Math.floor(Math.random() * (100 - 1) + 1);
     
 
@@ -42,7 +42,8 @@ export class PracticaPage {
         break;
       case 'restar':
         operador = '-';
-        operando2 = Math.floor(Math.random() * (operando1 - 1) + 1);
+        // minuendo entre 1 y operando1 (ambos incluidos)
+        operando2 = Math.floor(Math.random() * operando1 + 1);
         resultado = operando1 - operando2;
         break;
       case 'multiplicar':
@@ -59,11 +60,12 @@ export class PracticaPage {
         resultado = operando1 / operando2;
         break;
       default:
-        resultado = 'ERROR';
+        construirOperacion = 'ERROR';
         break;
     }
-    construirOperacion = operando1 + ' ' + operador + ' ' + operando2 + ' = ' + resultado; 
+    construirOperacion = operando1 + ' ' + operador + ' ' + operando2 + ' = '; 
     document.getElementById("operacionMostrada").innerHTML = construirOperacion;
+    return 48;
   }
 
 }

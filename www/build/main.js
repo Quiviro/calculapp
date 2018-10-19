@@ -393,7 +393,7 @@ var PracticaPage = (function () {
         var resultado;
         var construirOperacion;
         // Math.floor(Math.random()) * (max - min) + min;
-        operando1 = Math.floor(Math.random() * (100 - 1) + 1);
+        operando1 = Math.floor(Math.random() * (10 - 1) + 1);
         switch (operacion) {
             case 'sumar':
                 operador = '+';
@@ -402,7 +402,8 @@ var PracticaPage = (function () {
                 break;
             case 'restar':
                 operador = '-';
-                operando2 = Math.floor(Math.random() * (operando1 - 1) + 1);
+                // minuendo entre 1 y operando1 (ambos incluidos)
+                operando2 = Math.floor(Math.random() * operando1 + 1);
                 resultado = operando1 - operando2;
                 break;
             case 'multiplicar':
@@ -427,7 +428,7 @@ var PracticaPage = (function () {
     };
     PracticaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-practica',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/calculapp/src/pages/practica/practica.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="finger-print"></ion-icon>\n    </button>\n    <ion-title>Práctica</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2 text-center>Elige una operación</h2>\n  <form>\n    <ion-list radio-group name=\'operacion\' [(ngModel)]=\'operacion\'>\n      <ion-item>\n        <ion-label>Sumar</ion-label>\n        <ion-radio value="sumar"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Restar</ion-label>\n        <ion-radio value="restar"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Multiplicar</ion-label>\n        <ion-radio value="multiplicar"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Dividir</ion-label>\n        <ion-radio value="dividir"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <button ion-button type="submit" (click)=\'mostrarOperacion(operacion)\'>Empezar</button>\n  </form>\n  <p id="operacionMostrada" text-center></p>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/calculapp/src/pages/practica/practica.html"*/,
+            selector: 'page-practica',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/calculapp/src/pages/practica/practica.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="finger-print"></ion-icon>\n    </button>\n    <ion-title>Práctica</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2 text-center>Elige una operación</h2>\n  <form>\n    <ion-list radio-group name=\'operacion\' [(ngModel)]=\'operacion\'>\n      <ion-item>\n        <ion-label>Sumar</ion-label>\n        <ion-radio value="sumar"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Restar</ion-label>\n        <ion-radio value="restar"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Multiplicar</ion-label>\n        <ion-radio value="multiplicar"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Dividir</ion-label>\n        <ion-radio value="dividir"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <button ion-button type="submit" (click)=\'mostrarOperacion(operacion)\'>Empezar</button>\n  </form>\n  <br><br>\n  <form id="calculaccion" [hidden]="mostrarOperacion(operacion)==48">\n    <span id="operacionMostrada"></span>\n    <input type="number" placeholder="¿?" name="calculo"/>\n    <button ion-button color=secondary type="submit">¿?</button>\n  </form> \n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/calculapp/src/pages/practica/practica.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], PracticaPage);

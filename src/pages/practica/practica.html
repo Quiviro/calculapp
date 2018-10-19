@@ -30,5 +30,10 @@
     </ion-list>
     <button ion-button type="submit" (click)='mostrarOperacion(operacion)'>Empezar</button>
   </form>
-  <p id="operacionMostrada" text-center></p>
+  <br><br>
+  <form id="calculaccion" [hidden]="mostrarOperacion(operacion)==48">
+    <span id="operacionMostrada"></span>
+    <input type="number" placeholder="¿?" name="calculo"/>
+    <button ion-button color=secondary type="submit">¿?</button>
+  </form> 
 </ion-content>
