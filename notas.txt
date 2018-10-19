@@ -1,14 +1,6 @@
-Portada
-
-Calcular (elegir y ejecutar operaciones)
-
-Estudiar (explicaciones teóricas)
-  Pestaña de iconos + - * /
-
-
-
-Varios niveles de dificultad (random * 10, 100, 1000...,negativos, decimales...)
+Pedir resultado al usuario
+Comprobar que es correcto
 Contador de racha de aciertos
-
-
+Varios niveles de dificultad
+operando1 != númeroPrimo
 

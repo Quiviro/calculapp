@@ -15,9 +15,9 @@
         <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
         <param name="onload" value="true" />
     </feature>
-    <name>MyApp</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <name>CalculApp</name>
+    <description>Apprende a calcular</description>
+    <author email="hi@ionicframework" href="http://quiviro.es/">Quiviro Enquerre</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
