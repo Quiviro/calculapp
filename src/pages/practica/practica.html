@@ -8,13 +8,28 @@
 </ion-header>
 
 <ion-content padding>
-  <h1 text-center>Elige tu configuración</h1>
-
-  <p>
-    
-  </p>
-
-  <button ion-button secondary menuToggle text-centered>
-    <ion-icon left name="finger-print"> Menu</ion-icon>
-  </button>
+  <h2 text-center>Elige una operación</h2>
+  <br>
+  <form>
+    <ion-list radio-group name='operacion' [(ngModel)]='operacion'>
+      <ion-item>
+        <ion-label>Sumar</ion-label>
+        <ion-radio value="sumar"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Restar</ion-label>
+        <ion-radio value="restar"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Multiplicar</ion-label>
+        <ion-radio value="multiplicar"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dividir</ion-label>
+        <ion-radio value="dividir"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <button ion-button type="submit" (click)='mostrarOperacion(operacion)'>Empezar</button>
+  </form>
+  <p id="operacionMostrada" text-center></p>
 </ion-content>
