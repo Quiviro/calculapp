@@ -60494,6 +60494,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-practica #botonOperacion {
+  display: none;
+}
+
 page-teoria .botonera ion-segment-button {
   height: 66px !important;
   line-height: .5rem !important;

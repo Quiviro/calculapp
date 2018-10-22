@@ -22,17 +22,25 @@ export class PracticaPage {
     console.log('ionViewDidLoad PracticaPage');
   }
 
+  mostrarBotonOperacion()
+  {
+    console.log("muestra botón");
+    document.getElementById("botonOperacion").style.display = 'inline-block';
+  }
+
   mostrarOperacion(operacion)
   {
     let operador:string;
     let operando1:number;
     let operando2:number;
-    let resultado:number;
+    var resultado:number;
     let construirOperacion:string = '';
 
     // Math.floor(Math.random() * (max - min) + min);
     operando1 = Math.floor(Math.random() * (100 - 1) + 1);
     
+    document.getElementById("resultado").style.display = "none";
+    document.getElementById("numero").value = '';
 
     switch (operacion) {
       case 'sumar':
@@ -65,7 +73,14 @@ export class PracticaPage {
     }
     construirOperacion = operando1 + ' ' + operador + ' ' + operando2 + ' = '; 
     document.getElementById("operacionMostrada").innerHTML = construirOperacion;
-    return 48;
+    document.getElementById("calculaccion").style.display = 'block';
+    document.getElementById("resultado").value = resultado;
   }
+  
+  comprobarResultado(resultado)
+  {
+    document.getElementById("resultado").style.display = "inline";
+  }
+  
 
 }

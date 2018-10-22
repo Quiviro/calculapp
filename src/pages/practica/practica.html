@@ -10,30 +10,31 @@
 <ion-content padding>
   <h2 text-center>Elige una operación</h2>
   <form>
-    <ion-list radio-group name='operacion' [(ngModel)]='operacion'>
+    <ion-list radio-group name='operacion' [(ngModel)]='operacion' (ionSelect)='mostrarBotonOperacion()'>
       <ion-item>
         <ion-label>Sumar</ion-label>
-        <ion-radio value="sumar"></ion-radio>
+        <ion-radio value="sumar" (ionSelect)="mostrarOperacion('sumar')"></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>Restar</ion-label>
-        <ion-radio value="restar"></ion-radio>
+        <ion-radio value="restar" (ionSelect)='mostrarOperacion("restar")'></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>Multiplicar</ion-label>
-        <ion-radio value="multiplicar"></ion-radio>
+        <ion-radio value="multiplicar" (ionSelect)="mostrarOperacion('multiplicar')"></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>Dividir</ion-label>
-        <ion-radio value="dividir"></ion-radio>
+        <ion-radio value="dividir" (ionSelect)="mostrarOperacion('dividir')"></ion-radio>
       </ion-item>
     </ion-list>
-    <button ion-button type="submit" (click)='mostrarOperacion(operacion)'>Empezar</button>
+    <p id="calculaccion" [ngStyle]="{'display': 'none'}">
+      <span id="operacionMostrada"></span>
+      <input id="numero" type="number" placeholder="¿?" name="calculo"/>
+      <button ion-button color=secondary type="submit" (click)="comprobarResultado(operacion)">¿?</button>
+      <input id="resultado" type="number" name="resultado" disabled [ngStyle]="{'display': 'none'}"/>
+    </p> 
   </form>
   <br><br>
-  <form id="calculaccion" [hidden]="mostrarOperacion(operacion)==48">
-    <span id="operacionMostrada"></span>
-    <input type="number" placeholder="¿?" name="calculo"/>
-    <button ion-button color=secondary type="submit">¿?</button>
-  </form> 
+
 </ion-content>
