@@ -22,25 +22,19 @@ export class PracticaPage {
     console.log('ionViewDidLoad PracticaPage');
   }
 
-  mostrarBotonOperacion()
-  {
-    console.log("muestra botón");
-    document.getElementById("botonOperacion").style.display = 'inline-block';
-  }
-
   mostrarOperacion(operacion)
   {
     let operador:string;
     let operando1:number;
     let operando2:number;
-    var resultado:number;
+    let resultado:number;
     let construirOperacion:string = '';
 
     // Math.floor(Math.random() * (max - min) + min);
     operando1 = Math.floor(Math.random() * (100 - 1) + 1);
     
     document.getElementById("resultado").style.display = "none";
-    // document.getElementById("numero").value = '';
+    document.getElementById("numero").value = '';
 
     switch (operacion) {
       case 'sumar':
@@ -50,7 +44,7 @@ export class PracticaPage {
         break;
       case 'restar':
         operador = '-';
-        // minuendo entre 1 y operando1 (ambos incluidos)
+        // sustraendo entre 1 y operando1 (ambos incluidos)
         operando2 = Math.floor(Math.random() * operando1 + 1);
         resultado = operando1 - operando2;
         break;
@@ -75,9 +69,16 @@ export class PracticaPage {
     document.getElementById("operacionMostrada").innerHTML = construirOperacion;
     document.getElementById("calculaccion").style.display = 'block';
     document.getElementById("resultado").value = resultado;
+    return resultado;
+
+  }
+
+  comprobarResultado()
+  {
     var numero = document.getElementById("numero").value;
-    console.log(numero);
-    if(numero)
+    console.log('número: ' + numero);
+    console.log('resultado: ' + this.mostrarOperacion('sumar'));
+    /* if(numero)
     {
       if(numero == resultado)
       {
@@ -87,12 +88,7 @@ export class PracticaPage {
       {
         console.log("error");
       }
-    }
-
-  }
-  
-  comprobarResultado(resultado)
-  {
+    } */
     document.getElementById("resultado").style.display = "inline";
   }
   
