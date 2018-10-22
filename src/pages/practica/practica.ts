@@ -34,7 +34,7 @@ export class PracticaPage {
     operando1 = Math.floor(Math.random() * (100 - 1) + 1);
     
     document.getElementById("resultado").style.display = "none";
-    document.getElementById("numero").value = '';
+    // document.getElementById("numero").value = '';
 
     switch (operacion) {
       case 'sumar':
@@ -68,15 +68,15 @@ export class PracticaPage {
     construirOperacion = operando1 + ' ' + operador + ' ' + operando2 + ' = '; 
     document.getElementById("operacionMostrada").innerHTML = construirOperacion;
     document.getElementById("calculaccion").style.display = 'block';
-    document.getElementById("resultado").value = resultado;
+    // document.getElementById("resultado").value = resultado;
     return resultado;
 
   }
 
   comprobarResultado()
   {
-    var numero = document.getElementById("numero").value;
-    console.log('número: ' + numero);
+    // var numero = document.getElementById("numero").value;
+    // console.log('número: ' + numero);
     console.log('resultado: ' + this.mostrarOperacion('sumar'));
     /* if(numero)
     {
