@@ -40,7 +40,7 @@ export class PracticaPage {
     operando1 = Math.floor(Math.random() * (100 - 1) + 1);
     
     document.getElementById("resultado").style.display = "none";
-    document.getElementById("numero").value = '';
+    // document.getElementById("numero").value = '';
 
     switch (operacion) {
       case 'sumar':
@@ -75,6 +75,20 @@ export class PracticaPage {
     document.getElementById("operacionMostrada").innerHTML = construirOperacion;
     document.getElementById("calculaccion").style.display = 'block';
     document.getElementById("resultado").value = resultado;
+    var numero = document.getElementById("numero").value;
+    console.log(numero);
+    if(numero)
+    {
+      if(numero == resultado)
+      {
+        console.log("acierto");
+      }
+      else
+      {
+        console.log("error");
+      }
+    }
+
   }
   
   comprobarResultado(resultado)
