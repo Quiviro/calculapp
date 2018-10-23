@@ -15,6 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PracticaPage {
 
+  public operador:string;
+  public operando1:number;
+  public operando2:number;
+  public resultado:number;
+  public construirOperacion:string = '';
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -24,63 +30,64 @@ export class PracticaPage {
 
   mostrarOperacion(operacion)
   {
-    let operador:string;
+/*     let operador:string;
     let operando1:number;
     let operando2:number;
     let resultado:number;
-    let construirOperacion:string = '';
+    let construirOperacion:string = ''; */
 
     // Math.floor(Math.random() * (max - min) + min);
-    operando1 = Math.floor(Math.random() * (100 - 1) + 1);
+    this.operando1 = Math.floor(Math.random() * (100 - 1) + 1);
     
     document.getElementById("resultado").style.display = "none";
-    // document.getElementById("numero").value = '';
+    document.getElementById("numero").value = '';
 
     switch (operacion) {
       case 'sumar':
-        operador = '+';
-        operando2 = Math.floor(Math.random() * (100 - 1) + 1);
-        resultado = operando1 + operando2;
+        this.operador = '+';
+        this.operando2 = Math.floor(Math.random() * (100 - 1) + 1);
+        this.resultado = this.operando1 + this.operando2;
         break;
       case 'restar':
-        operador = '-';
+        this.operador = '-';
         // sustraendo entre 1 y operando1 (ambos incluidos)
-        operando2 = Math.floor(Math.random() * operando1 + 1);
-        resultado = operando1 - operando2;
+        this.operando2 = Math.floor(Math.random() * this.operando1 + 1);
+        this.resultado = this.operando1 - this.operando2;
         break;
       case 'multiplicar':
-        operador = '*';
-        operando2 = Math.floor(Math.random() * (10 - 1) + 1);
-        resultado = operando1 * operando2;
+        this.operador = '*';
+        this.operando2 = Math.floor(Math.random() * (10 - 1) + 1);
+        this.resultado = this.operando1 * this.operando2;
         break;
       case 'dividir':
-        operador = '/';
+      this.operador = '/';
         // divisor entre 1 y operando1 (ambos incluidos)
         do {
-          operando2 = Math.floor(Math.random() * operando1 + 1);
-        } while (operando1 % operando2);
-        resultado = operando1 / operando2;
+          this.operando2 = Math.floor(Math.random() * this.operando1 + 1);
+        } while (this.operando1 % this.operando2);
+        this.resultado = this.operando1 / this.operando2;
         break;
       default:
-        construirOperacion = 'ERROR';
-        break;
+        this.construirOperacion = 'ERROR';
+        return;
+        // break;
     }
-    construirOperacion = operando1 + ' ' + operador + ' ' + operando2 + ' = '; 
-    document.getElementById("operacionMostrada").innerHTML = construirOperacion;
+    this.construirOperacion = this.operando1 + ' ' + this.operador + ' ' + this.operando2 + ' = '; 
+    document.getElementById("operacionMostrada").innerHTML = this.construirOperacion;
     document.getElementById("calculaccion").style.display = 'block';
-    // document.getElementById("resultado").value = resultado;
-    return resultado;
+    document.getElementById("resultado").value = this.resultado;
+    return this.resultado;
 
   }
 
   comprobarResultado()
   {
-    // var numero = document.getElementById("numero").value;
-    // console.log('número: ' + numero);
-    console.log('resultado: ' + this.mostrarOperacion('sumar'));
-    /* if(numero)
+    var numero = document.getElementById("numero").value;
+    console.log('número: ' + numero);
+    // console.log('resultado: ' + this.mostrarOperacion('sumar'));
+    if(numero)
     {
-      if(numero == resultado)
+      if(numero == this.resultado)
       {
         console.log("acierto");
       }
@@ -88,7 +95,7 @@ export class PracticaPage {
       {
         console.log("error");
       }
-    } */
+    }
     document.getElementById("resultado").style.display = "inline";
   }
   
