@@ -23,6 +23,7 @@ export class PracticaPage {
   public colorResultado:string;
   public numero:number;
   public mensajeResultado:string;
+  public contador:number = 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -91,16 +92,17 @@ export class PracticaPage {
       {
         this.colorResultado = 'acierto';
         this.mensajeResultado = "¡Muy bien, has acertado!";
+        this.contador++;
       }
       else
       {
         this.colorResultado = 'error';
         this.mensajeResultado = "¡Uyyyyy! Casi, pero no.";
+        this.contador = 0;
       }
       document.getElementById("resultado").style.display = "inline";
       document.getElementById("mensaje-resultado").style.display = "inline";
     }
-    
   }
   
 

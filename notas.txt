@@ -1,5 +1,6 @@
-Pedir resultado al usuario y guardar el valor a la manera de Ionic
-Contador de racha de aciertos
+Comprueba desactivado después de haber comprobado
+Contador de racha de aciertos ¿persistente?
+Cambiar iconos ¿/resources/icon, splash?
 Varios niveles de dificultad
 'dividir': operando1 != númeroPrimo
 
