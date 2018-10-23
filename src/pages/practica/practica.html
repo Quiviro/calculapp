@@ -30,11 +30,11 @@
     </ion-list>
     <p id="calculaccion" [ngStyle]="{'display': 'none'}" text-center>
       <span id="operacionMostrada"></span>
-      <input id="numero" type="number" placeholder="¿?" name="numero"/>
+      <input id="numero" type="number" placeholder="¿?" [(ngModel)]= 'numero' name="numero"/>
       <br>
       <button ion-button color=secondary type="submit" (click)="comprobarResultado()">Comprueba</button>
       <br>
-      <button id="resultado" ion-button color='{{colorResultado}}'>{{resultado}}</button> &nbsp; &nbsp;{{mensajeResultado}}
+      <button id="resultado" ion-button color='{{colorResultado}}'>{{resultado}}</button> <span id="mensaje-resultado">&nbsp; &nbsp;{{mensajeResultado}}</span>
     </p> 
 
   </form>

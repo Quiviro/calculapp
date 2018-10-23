@@ -331,7 +331,7 @@ var PracticaPage = (function () {
         // Math.floor(Math.random() * (max - min) + min);
         this.operando1 = Math.floor(Math.random() * (100 - 1) + 1);
         document.getElementById("resultado").style.display = "none";
-        // document.getElementById("numero").value = '';
+        document.getElementById("mensaje-resultado").style.display = "none";
         switch (operacion) {
             case 'sumar':
                 this.operador = '+';
@@ -368,7 +368,6 @@ var PracticaPage = (function () {
         // return this.resultado;
     };
     PracticaPage.prototype.comprobarResultado = function () {
-        this.numero = document.getElementById("numero").value;
         if (this.numero) {
             if (this.numero == this.resultado) {
                 this.colorResultado = 'acierto';
@@ -379,11 +378,12 @@ var PracticaPage = (function () {
                 this.mensajeResultado = "¡Uyyyyy! Casi, pero no.";
             }
             document.getElementById("resultado").style.display = "inline";
+            document.getElementById("mensaje-resultado").style.display = "inline";
         }
     };
     PracticaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-practica',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/calculapp/src/pages/practica/practica.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="finger-print"></ion-icon>\n    </button>\n    <ion-title>Práctica</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2 text-center>Elige una operación</h2>\n  <form>\n    <ion-list radio-group name=\'operacion\' [(ngModel)]=\'operacion\' (ionSelect)=\'mostrarBotonOperacion()\'>\n      <ion-item>\n        <ion-label>Sumar</ion-label>\n        <ion-radio value="sumar" (ionSelect)="mostrarOperacion(\'sumar\')"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Restar</ion-label>\n        <ion-radio value="restar" (ionSelect)=\'mostrarOperacion("restar")\'></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Multiplicar</ion-label>\n        <ion-radio value="multiplicar" (ionSelect)="mostrarOperacion(\'multiplicar\')"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Dividir</ion-label>\n        <ion-radio value="dividir" (ionSelect)="mostrarOperacion(\'dividir\')"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <p id="calculaccion" [ngStyle]="{\'display\': \'none\'}" text-center>\n      <span id="operacionMostrada"></span>\n      <input id="numero" type="number" placeholder="¿?" name="numero"/>\n      <br>\n      <button ion-button color=secondary type="submit" (click)="comprobarResultado()">Comprueba</button>\n      <br>\n      <button id="resultado" ion-button color=\'{{colorResultado}}\'>{{resultado}}</button> &nbsp; &nbsp;{{mensajeResultado}}\n    </p> \n\n  </form>\n  <p>\n    <!-- <input id="resultado" type="number" name="resultado" disabled [ngStyle]="{\'display\': \'none\'}" value=numero/> -->\n    \n  </p>\n  <br><br>\n\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/calculapp/src/pages/practica/practica.html"*/,
+            selector: 'page-practica',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/calculapp/src/pages/practica/practica.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="finger-print"></ion-icon>\n    </button>\n    <ion-title>Práctica</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2 text-center>Elige una operación</h2>\n  <form>\n    <ion-list radio-group name=\'operacion\' [(ngModel)]=\'operacion\' (ionSelect)=\'mostrarBotonOperacion()\'>\n      <ion-item>\n        <ion-label>Sumar</ion-label>\n        <ion-radio value="sumar" (ionSelect)="mostrarOperacion(\'sumar\')"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Restar</ion-label>\n        <ion-radio value="restar" (ionSelect)=\'mostrarOperacion("restar")\'></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Multiplicar</ion-label>\n        <ion-radio value="multiplicar" (ionSelect)="mostrarOperacion(\'multiplicar\')"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>Dividir</ion-label>\n        <ion-radio value="dividir" (ionSelect)="mostrarOperacion(\'dividir\')"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <p id="calculaccion" [ngStyle]="{\'display\': \'none\'}" text-center>\n      <span id="operacionMostrada"></span>\n      <input id="numero" type="number" placeholder="¿?" [(ngModel)]= \'numero\' name="numero"/>\n      <br>\n      <button ion-button color=secondary type="submit" (click)="comprobarResultado()">Comprueba</button>\n      <br>\n      <button id="resultado" ion-button color=\'{{colorResultado}}\'>{{resultado}}</button> <span id="mensaje-resultado">&nbsp; &nbsp;{{mensajeResultado}}</span>\n    </p> \n\n  </form>\n  <p>\n    <!-- <input id="resultado" type="number" name="resultado" disabled [ngStyle]="{\'display\': \'none\'}" value=numero/> -->\n    \n  </p>\n  <br><br>\n\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/calculapp/src/pages/practica/practica.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
     ], PracticaPage);

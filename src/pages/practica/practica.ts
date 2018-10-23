@@ -43,7 +43,7 @@ export class PracticaPage {
     this.operando1 = Math.floor(Math.random() * (100 - 1) + 1);
     
     document.getElementById("resultado").style.display = "none";
-    // document.getElementById("numero").value = '';
+    document.getElementById("mensaje-resultado").style.display = "none";
 
     switch (operacion) {
       case 'sumar':
@@ -85,7 +85,6 @@ export class PracticaPage {
 
   comprobarResultado()
   {
-    this.numero = document.getElementById("numero").value;
     if(this.numero)
     {
       if(this.numero == this.resultado)
@@ -99,6 +98,7 @@ export class PracticaPage {
         this.mensajeResultado = "¡Uyyyyy! Casi, pero no.";
       }
       document.getElementById("resultado").style.display = "inline";
+      document.getElementById("mensaje-resultado").style.display = "inline";
     }
     
   }
