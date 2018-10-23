@@ -40,7 +40,7 @@ export class PracticaPage {
     this.operando1 = Math.floor(Math.random() * (100 - 1) + 1);
     
     document.getElementById("resultado").style.display = "none";
-    document.getElementById("numero").value = '';
+    // document.getElementById("numero").value = '';
 
     switch (operacion) {
       case 'sumar':
@@ -75,8 +75,8 @@ export class PracticaPage {
     this.construirOperacion = this.operando1 + ' ' + this.operador + ' ' + this.operando2 + ' = '; 
     document.getElementById("operacionMostrada").innerHTML = this.construirOperacion;
     document.getElementById("calculaccion").style.display = 'block';
-    document.getElementById("resultado").value = this.resultado;
-    return this.resultado;
+    // document.getElementById("resultado").value = this.resultado;
+    // return this.resultado;
 
   }
 
