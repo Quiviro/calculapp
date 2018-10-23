@@ -19,7 +19,10 @@ export class PracticaPage {
   public operando1:number;
   public operando2:number;
   public resultado:number;
-  public construirOperacion:string = '';
+  public construirOperacion:string;
+  public colorResultado:string;
+  public numero:number;
+  public mensajeResultado:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -68,7 +71,7 @@ export class PracticaPage {
         this.resultado = this.operando1 / this.operando2;
         break;
       default:
-        this.construirOperacion = 'ERROR';
+        this.construirOperacion = 'ERROR construirOperacion';
         return;
         // break;
     }
@@ -82,21 +85,22 @@ export class PracticaPage {
 
   comprobarResultado()
   {
-    var numero = document.getElementById("numero").value;
-    console.log('número: ' + numero);
-    // console.log('resultado: ' + this.mostrarOperacion('sumar'));
-    if(numero)
+    this.numero = document.getElementById("numero").value;
+    if(this.numero)
     {
-      if(numero == this.resultado)
+      if(this.numero == this.resultado)
       {
-        console.log("acierto");
+        this.colorResultado = 'acierto';
+        this.mensajeResultado = "¡Muy bien, has acertado!";
       }
       else
       {
-        console.log("error");
+        this.colorResultado = 'error';
+        this.mensajeResultado = "¡Uyyyyy! Casi, pero no.";
       }
+      document.getElementById("resultado").style.display = "inline";
     }
-    document.getElementById("resultado").style.display = "inline";
+    
   }
   
 

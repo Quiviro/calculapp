@@ -1,7 +1,4 @@
-Quiero ocultar/mostrar la operación como hicimos en la página modal.html
-
-Pedir resultado al usuario
-Comprobar que es correcto
+Pedir resultado al usuario y guardar el valor a la manera de Ionic
 Contador de racha de aciertos
 Varios niveles de dificultad
 'dividir': operando1 != númeroPrimo
