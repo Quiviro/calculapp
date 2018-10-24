@@ -24,6 +24,7 @@ export class PracticaPage {
   public numero:number;
   public mensajeResultado:string;
   public contador:number = 0;
+  public comprobado:boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -79,9 +80,9 @@ export class PracticaPage {
     this.construirOperacion = this.operando1 + ' ' + this.operador + ' ' + this.operando2 + ' = '; 
     document.getElementById("operacionMostrada").innerHTML = this.construirOperacion;
     document.getElementById("calculaccion").style.display = 'block';
-    // document.getElementById("resultado").value = this.resultado;
-    // return this.resultado;
-
+    // en este punto, todavía no he comprobado el resultado
+    // el botón de comprobar debe estar activado
+    this.comprobado = false;
   }
 
   comprobarResultado()
@@ -102,7 +103,10 @@ export class PracticaPage {
       }
       document.getElementById("resultado").style.display = "inline";
       document.getElementById("mensaje-resultado").style.display = "inline";
+      
     }
+    // una vez comprobado el resultado, el botón se desactiva
+    this.comprobado = true;   
   }
   
 

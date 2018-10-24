@@ -1,4 +1,4 @@
-Comprueba desactivado después de haber comprobado
+Desmarca la operación después de haber comprobado
 Contador de racha de aciertos ¿persistente?
 Cambiar iconos ¿/resources/icon, splash?
 Varios niveles de dificultad

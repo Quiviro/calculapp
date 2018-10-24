@@ -34,7 +34,7 @@
         <input id="numero" type="number" placeholder="¿?" [(ngModel)]= 'numero' name="numero"/>        
       </p>
       <p>
-        <button ion-button color=secondary type="submit" (click)="comprobarResultado()">Comprueba</button>
+        <button ion-button color=secondary type="submit" (click)="comprobarResultado()" [disabled]="comprobado">Comprueba</button>
       </p>
       <p>
         <button id="resultado" ion-button color='{{colorResultado}}'>
